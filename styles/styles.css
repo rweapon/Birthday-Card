@@ -1,0 +1,86 @@
+@import "./reset.css";
+
+body {
+  --letter-height: min(90vh, 90vw);
+  --letter-width: calc(var(--letter-height) * 0.88);
+  --text-height: calc(var(--letter-height) / 2);
+  --text-width: calc(var(--letter-width) / 1.8);
+  --text-padding: calc(var(--letter-height) / 50 + 1.5px);
+  --h-size: calc((var(--letter-height) / 27));
+  --p-size: calc((var(--letter-height) / 30));
+
+  overflow: hidden;
+}
+
+h1 {
+  font-size: var(--h-size);
+  font-weight: 600;
+  text-align: center;
+}
+
+.background {
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+}
+
+.image {
+  position: absolute;
+  top: 0;
+  height: inherit;
+  width: inherit;
+  object-fit: cover;
+  object-position: center;
+}
+
+.letter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
+.letter__inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  height: var(--letter-height);
+  width: var(--letter-width);
+}
+
+.letter__text {
+  position: relative;
+  height: var(--text-height);
+  width: var(--text-width);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: var(--h-size);
+  padding-top: var(--text-padding);
+  margin-left: var(--text-padding);
+  gap: var(--text-padding);
+}
+
+.text__body {
+  width: inherit;
+  font-size: var(--p-size);
+  font-weight: 400;
+}
+
+@media all and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
+  @media (max-width: 430px) {
+    body {
+      --text-padding: calc(var(--letter-height) / 50);
+    }
+    .text__header,
+    .text__body {
+      scale: calc(11 / 12);
+      width: calc(var(--text-width) / (11 / 12));
+    }
+  }
+}
