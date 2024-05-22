@@ -1,8 +1,9 @@
 @import "./reset.css";
 
 body {
-  --letter-height: min(90vh, 90vw);
+  --letter-height: min(85vh, 100vw);
   --letter-width: calc(var(--letter-height) * 0.88);
+  --letter-margin: calc((100vh - var(--letter-height)) / 2);
   --text-height: calc(var(--letter-height) / 2);
   --text-width: calc(var(--letter-width) / 1.8);
   --text-padding: calc(var(--letter-height) / 50 + 1.5px);
@@ -37,7 +38,7 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 20px;
+  margin-top: var(--letter-margin);
 }
 
 .letter__inner {
@@ -48,6 +49,7 @@ h1 {
   justify-content: start;
   height: var(--letter-height);
   width: var(--letter-width);
+  margin-left: -5px;
 }
 
 .letter__text {
@@ -77,6 +79,7 @@ h1 {
     body {
       --text-padding: calc(var(--letter-height) / 50);
     }
+
     .text__header,
     .text__body {
       scale: calc(11 / 12);
