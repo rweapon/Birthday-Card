@@ -3,7 +3,7 @@
 body {
   --letter-height: min(85vh, 100vw);
   --letter-width: calc(var(--letter-height) * 0.88);
-  --letter-margin: calc((100vh - var(--letter-height)) / 2);
+  --letter-margin: calc((100vh - var(--letter-height)) / 3);
   --text-height: calc(var(--letter-height) / 2);
   --text-width: calc(var(--letter-width) / 1.8);
   --text-padding: calc(var(--letter-height) / 50 + 1.5px);
