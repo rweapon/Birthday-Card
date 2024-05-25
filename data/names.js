@@ -54,6 +54,21 @@ const names = [
     sex: "M",
     url: "igor",
   },
+  {
+    name: "Танюша",
+    sex: "Ж",
+    url: "tanya",
+  },
+  {
+    name: "Глебас",
+    sex: "M",
+    url: "gleb",
+  },
+  {
+    name: "Димас",
+    sex: "M",
+    url: "dima",
+  },
 ];
 
 export default names;
