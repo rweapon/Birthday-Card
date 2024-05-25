@@ -60,6 +60,11 @@ const names = [
     url: "tanya",
   },
   {
+    name: "Сона",
+    sex: "Ж",
+    url: "sona",
+  },
+  {
     name: "Глебас",
     sex: "M",
     url: "gleb",
